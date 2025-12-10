@@ -239,13 +239,108 @@
     </section>
 
     <!-- CONTACT -->
-<section id="contact" class="reveal">
+<section id="contact" class="reveal" style="position: relative; overflow: hidden;">
     <h2>Contact</h2>
+
     <p><strong>Email:</strong> akshayrathor723@gmail.com</p>
     <p><strong>Mobile:</strong> 7692977692</p>
-    <p><strong>Instagram:</strong> @akshayy_rathore</p>
-</section>
 
+    <style>
+
+        /* Neon Glow Animation */
+        @keyframes neonPulse {
+            0% { box-shadow: 0 0 10px rgba(120, 90, 255, 0.6); }
+            50% { box-shadow: 0 0 22px rgba(120, 90, 255, 1); }
+            100% { box-shadow: 0 0 10px rgba(120, 90, 255, 0.6); }
+        }
+
+        /* Floating up-down Animation */
+        @keyframes floatingEffect {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Background Glow Wave Animation */
+        @keyframes waveMove {
+            0% { transform: translateY(0) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-20px) scale(1.05); opacity: 1; }
+            100% { transform: translateY(0) scale(1); opacity: 0.7; }
+        }
+
+        /* Glow Wave Base */
+        .glow-wave {
+            position: absolute;
+            width: 380px;
+            height: 380px;
+            filter: blur(110px);
+            z-index: -1;
+            opacity: 0.75;
+            border-radius: 50%;
+            animation: waveMove 6s infinite ease-in-out;
+        }
+
+        /* Buttons */
+        .social-btn {
+            padding: 12px 25px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.25s ease, filter 0.3s ease;
+            animation: 
+                neonPulse 2.2s infinite ease-in-out,
+                floatingEffect 3.5s infinite ease-in-out;
+            transform-style: preserve-3d;
+        }
+
+        /* HOVER – SCALE + 3D TILT */
+        .social-btn:hover {
+            transform: scale(1.15) rotateX(8deg) rotateY(-8deg);
+            filter: brightness(1.22);
+        }
+
+    </style>
+
+    <!-- 🔵 LEFT CYAN GLOW -->
+    <div class="glow-wave" 
+         style="left: -120px; top: 40px; background: #00eaff;"></div>
+
+    <!-- 🟣 RIGHT PURPLE-PINK GLOW -->
+    <div class="glow-wave" 
+         style="right: -120px; bottom: 20px; background: #c400ff;"></div>
+
+    <!-- SOCIAL BUTTONS -->
+    <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 15px; align-items: center;">
+
+        <a href="https://instagram.com/akshayy_rathore" target="_blank"
+           class="social-btn"
+           style="background: linear-gradient(135deg, #ff5df0, #7b5bff);">
+            📸 Instagram Profile
+        </a>
+
+        <a href="https://wa.me/7692977692" target="_blank"
+           class="social-btn"
+           style="background: linear-gradient(135deg, #25D366, #128C7E);">
+            💬 WhatsApp Chat
+        </a>
+
+        <a href="https://www.snapchat.com/add/akshayrathorre" target="_blank"
+           class="social-btn"
+           style="background: linear-gradient(135deg, #FFFC00, #FFD700); color: black;">
+            👻 Snapchat Profile
+        </a>
+
+        <a href="https://www.linkedin.com/in/akshay-rathore-b19a94258" target="_blank"
+           class="social-btn"
+           style="background: linear-gradient(135deg, #0077b5, #00a0dc);">
+            🔗 LinkedIn Profile
+        </a>
+
+    </div>
+</section>
+    
     <!-- FOOTER -->
     <footer>
         © 2025 Akshay Rathore. All Rights Reserved.
