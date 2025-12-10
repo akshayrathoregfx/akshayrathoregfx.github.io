@@ -1,67 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Rathore | Graphic Designer</title>
 
     <style>
+        /* Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
         body {
-            font-family: Arial, sans-serif;
-            background: #0d0d0d;
-            color: white;
-            text-align: center;
-            padding: 50px;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
+            background: #f2f4f8;
+            color: #222;
+            overflow-x: hidden;
         }
 
-        h1 { 
-            color: #4da6ff; 
+        /* NAVBAR */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: white;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 15px 40px;
+            justify-content: flex-end;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #333;
+            transition: 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4a8bff;
+        }
+
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #4a8bff, #6bc2ff);
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
             margin-bottom: 10px;
         }
 
-        h3 { 
-            margin-top: 0;
+        .hero h3 {
+            font-size: 1.4rem;
             margin-bottom: 20px;
         }
 
-        p { 
-            font-size: 18px; 
-            line-height: 25px;
+        .hero p {
+            max-width: 600px;
+            font-size: 1rem;
+            line-height: 26px;
+            opacity: 0.9;
+        }
+
+        /* SECTION TITLES */
+        section h2 {
+            text-align: center;
+            margin: 80px 0 20px;
+            font-size: 2rem;
+            color: #4a8bff;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            padding: 0 30px 30px;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+            font-size: 1rem;
+            line-height: 28px;
+        }
+
+        /* SERVICES */
+        .services {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .service-box {
+            width: 260px;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.3s ease;
+        }
+
+        .service-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 18px rgba(0,0,0,0.15);
+        }
+
+        /* PORTFOLIO GALLERY */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 20px 30px 60px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CONTACT */
+        #contact {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+            margin-top: 40px;
         }
 
         /* SCROLL REVEAL */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
-            transition: all 0.8s ease-out;
+            transition: 0.8s ease-out;
         }
-
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.2rem; }
+            nav ul { justify-content: center; padding: 10px; }
+        }
     </style>
+
 </head>
 
 <body>
 
-    <div class="reveal">
-        <h1>Akshay Rathore</h1>
-        <h3>Graphic Designer</h3>
-        <p>Social media creatives • Reels thumbnails • Banners • Posters</p>
-        <p>Portfolio under development…</p>
-    </div>
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <h1 class="reveal">Akshay Rathore</h1>
+        <h3 class="reveal">Graphic Designer</h3>
+        <p class="reveal">I create modern and high-quality graphics including thumbnails, posters, banners, reels designs and social media creatives.</p>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+        <h2>About Me</h2>
+        <p>
+            I’m a passionate graphic designer with experience in creating engaging designs for brands, YouTubers, and social media influencers. 
+            My creativity and attention to detail help me produce visually appealing content for every project.
+        </p>
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services reveal">
+            <div class="service-box">Poster Design</div>
+            <div class="service-box">Thumbnail Design</div>
+            <div class="service-box">Banner & Flyers</div>
+            <div class="service-box">Social Media Creatives</div>
+            <div class="service-box">Reels Editing & Covers</div>
+        </div>
+    </section>
+
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="gallery reveal">
+            <!-- Replace images when you upload assets to GitHub -->
+            <img src="work1.png" alt="">
+            <img src="work2.png" alt="">
+            <img src="work3.png" alt="">
+            <img src="work4.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+        <h2>Contact</h2>
+        <p>Email: yourmail@gmail.com</p>
+        <p>Instagram: @yourprofile</p>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        © 2025 Akshay Rathore. All Rights Reserved.
+    </footer>
+
+
+    <!-- SCROLL REVEAL SCRIPT -->
     <script>
         function reveal() {
-            let reveals = document.querySelectorAll(".reveal");
-
-            reveals.forEach(el => {
+            let elements = document.querySelectorAll(".reveal");
+            elements.forEach(el => {
                 let windowHeight = window.innerHeight;
                 let elementTop = el.getBoundingClientRect().top;
-                let elementVisible = 150;
+                let visible = 120;
 
-                if (elementTop < windowHeight - elementVisible) {
+                if (elementTop < windowHeight - visible) {
                     el.classList.add("active");
                 }
             });
