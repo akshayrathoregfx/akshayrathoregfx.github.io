@@ -239,11 +239,12 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="reveal">
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
-        <p>Instagram: @yourprofile</p>
-    </section>
+<section id="contact" class="reveal">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> akshayrathor723@gmail.com</p>
+    <p><strong>Mobile:</strong> 7692977692</p>
+    <p><strong>Instagram:</strong> @akshayy_rathore</p>
+</section>
 
     <!-- FOOTER -->
     <footer>
@@ -259,150 +260,6 @@
                 }
             });
         }
-        window.addEventListener("scroll", reveal);
-        reveal();
-    </script>
-
-</body>
-</html>            padding: 20px 30px 60px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .gallery img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-            transition: 0.3s ease;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        /* CONTACT */
-        #contact {
-            text-align: center;
-            padding: 40px;
-            font-size: 1.1rem;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #222;
-            color: white;
-            margin-top: 40px;
-        }
-
-        /* SCROLL REVEAL */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: 0.8s ease-out;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2rem; }
-            nav ul { justify-content: center; padding: 10px; }
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <h1 class="reveal">Akshay Rathore</h1>
-        <h3 class="reveal">Graphic Designer</h3>
-        <p class="reveal">I create modern and high-quality graphics including thumbnails, posters, banners, reels designs and social media creatives.</p>
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about" class="reveal">
-        <h2>About Me</h2>
-        <p>
-            I’m a passionate graphic designer with experience in creating engaging designs for brands, YouTubers, and social media influencers. 
-            My creativity and attention to detail help me produce visually appealing content for every project.
-        </p>
-    </section>
-
-
-    <!-- SERVICES -->
-    <section id="services">
-        <h2>Services</h2>
-        <div class="services reveal">
-            <div class="service-box">Poster Design</div>
-            <div class="service-box">Thumbnail Design</div>
-            <div class="service-box">Banner & Flyers</div>
-            <div class="service-box">Social Media Creatives</div>
-            <div class="service-box">Reels Editing & Covers</div>
-        </div>
-    </section>
-
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio">
-        <h2>My Work</h2>
-        <div class="gallery reveal">
-            <!-- Replace images when you upload assets to GitHub -->
-            <img src="work1.png" alt="">
-            <img src="work2.png" alt="">
-            <img src="work3.png" alt="">
-            <img src="work4.png" alt="">
-        </div>
-    </section>
-
-
-    <!-- CONTACT -->
-    <section id="contact" class="reveal">
-        <h2>Contact</h2>
-        <p>Email: akshayrathor723@gmail.com</p>
-        <p>Mobile: 7692977692
-        <p>Instagram: @akshayy_rathore</p>
-    </section>
-
-
-    <!-- FOOTER -->
-    <footer>
-        © 2025 Akshay Rathore. All Rights Reserved.
-    </footer>
-
-
-    <!-- SCROLL REVEAL SCRIPT -->
-    <script>
-        function reveal() {
-            let elements = document.querySelectorAll(".reveal");
-            elements.forEach(el => {
-                let windowHeight = window.innerHeight;
-                let elementTop = el.getBoundingClientRect().top;
-                let visible = 120;
-
-                if (elementTop < windowHeight - visible) {
-                    el.classList.add("active");
-                }
-            });
-        }
-
         window.addEventListener("scroll", reveal);
         reveal();
     </script>
